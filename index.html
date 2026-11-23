@@ -10,12 +10,80 @@ Comment Out Code Command + /
     <meta charset="utf-8" />
     <title>Unit 4 - Flexbox</title>
     <style>
- 
+      
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+
+/* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+/* Position the front and back side */
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+/* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+/* Style the back side */
+    .flip-card-back {
+      background-color: rgb(62, 121, 6);
+      color: white;
+      transform: rotateY(180deg);
+    }
+
     </style>
   </head>
-  <body>
+<body>
     <h1>Jungle Animals</h1>
 
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="https://blogs.smithsonianmag.com/science/files/2013/03/gecko.jpg" alt="Avatar" style="height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <h1>Geckos</h1>
+        <p>are very cool</p>
+        <p>this one is named lionel</p>
+      </div>
+    </div>
+  </div>
    
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAC/CAMAAAD6m9FeAAAACVBMVEX///95qvf///zq7SvVAAAA10lEQVR4nO3PAQEAAAiAoOr/6IYgD5i9EdWW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1IY8Et4CPjLRkekAAAAASUVORK5CYII=" alt="Avatar" style="height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <img src="https://www.swelluk.com/wp-content/uploads/sites/3/2021/02/royal-pyhon-1-26.jpg" alt="chameleon" style="height:300px;">
+      </div>
+    </div>
+  </div>
   </body>
 </html>
