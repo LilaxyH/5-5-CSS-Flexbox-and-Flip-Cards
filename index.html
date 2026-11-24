@@ -9,16 +9,19 @@ Comment Out Code Command + /
   <head>
     <meta charset="utf-8" />
     <title>Unit 4 - Flexbox</title>
-    <style></style>
+    <style>
+
+      .flex_boxes {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+      }
 
       .flip-card {
         background-color: rgb(62, 121, 6);
-        width: 300px;
+        width: 500px;
         height: 300px;
         perspective: 1000px;
-        display: flex;
-        justify-content: flex-start space-between;
-        padding: 10px;
       }
 
 /* This container is needed to position the front and back side */
@@ -60,9 +63,11 @@ Comment Out Code Command + /
 
     </style>
   </head>
-<body style="background-color: rgb(62, 121, 6);">
+
+  <body style="background-color: rgb(62, 121, 6);">
     <h1>Jungle Animals</h1>
 
+  <div class="flex_boxes">
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
@@ -79,13 +84,14 @@ Comment Out Code Command + /
 
   <div class="flip-card">
     <div class="flip-card-inner">
-      <div class="flip-card-front" style="background-color:rgb(62, 121, 6)">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAC/CAMAAAD6m9FeAAAACVBMVEX///95qvf///zq7SvVAAAA10lEQVR4nO3PAQEAAAiAoOr/6IYgD5i9EdWW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1IY8Et4CPjLRkekAAAAASUVORK5CYII=" alt="Avatar" style="height:300px;">
+      <div class="flip-card-front" style="color: rgb(62, 121, 6)">
+        
       </div>
       <div class="flip-card-back">
         <img src="https://www.swelluk.com/wp-content/uploads/sites/3/2021/02/royal-pyhon-1-26.jpg" alt="chameleon" style="height:300px;">
       </div>
     </div>
+  </div>
   </div>
   </body>
 </html>
