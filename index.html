@@ -9,14 +9,16 @@ Comment Out Code Command + /
   <head>
     <meta charset="utf-8" />
     <title>Unit 4 - Flexbox</title>
-    <style>
-      
+    <style></style>
+
       .flip-card {
-        background-color: transparent;
+        background-color: rgb(62, 121, 6);
         width: 300px;
         height: 300px;
-        border: 1px solid #f1f1f1;
-        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+        perspective: 1000px;
+        display: flex;
+        justify-content: flex-start space-between;
+        padding: 10px;
       }
 
 /* This container is needed to position the front and back side */
@@ -41,12 +43,12 @@ Comment Out Code Command + /
         height: 100%;
         -webkit-backface-visibility: hidden; /* Safari */
         backface-visibility: hidden;
+        color: rgb(62, 121, 6);
       }
 
 /* Style the front side (fallback if image is missing) */
       .flip-card-front {
-        background-color: #bbb;
-        color: black;
+        background-color: rgb(62, 121, 6);
       }
 
 /* Style the back side */
@@ -58,7 +60,7 @@ Comment Out Code Command + /
 
     </style>
   </head>
-<body>
+<body style="background-color: rgb(62, 121, 6);">
     <h1>Jungle Animals</h1>
 
   <div class="flip-card">
@@ -77,7 +79,7 @@ Comment Out Code Command + /
 
   <div class="flip-card">
     <div class="flip-card-inner">
-      <div class="flip-card-front">
+      <div class="flip-card-front" style="background-color:rgb(62, 121, 6)">
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAC/CAMAAAD6m9FeAAAACVBMVEX///95qvf///zq7SvVAAAA10lEQVR4nO3PAQEAAAiAoOr/6IYgD5i9EdWW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1JbUltSW1IY8Et4CPjLRkekAAAAASUVORK5CYII=" alt="Avatar" style="height:300px;">
       </div>
       <div class="flip-card-back">
